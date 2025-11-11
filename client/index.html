@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Movie Reviews</title>
+</head>
+<body>
+
+	<h1>Movie Reviews</h1>
+	
+	<form id="movie_form">
+  <label for="reviewer_name">Reviewer Name:</label>
+  <input id="reviewer_name" type="text">
+
+  <label for="movie_input_name">Movie Name:</label>
+  <input id="movie_input_name" type="text">
+  
+  <label for="movie_input_genre">Genre:</label>
+  <input type="text" id="movie_input_genre" name="genre">
+
+
+  <label for="movie_input_rating">Movie Rating:</label>
+  <input id="movie_input_rating" type="text">
+
+  <label for="movie_input_review">Movie Review:</label>
+  <input id="movie_input_review" type="text">
+
+  <button id="movie_submit_button" type="button">Submit</button>
+	</form> 
+
+	<div id="movie_reviews">
+		<h3>Reviewer Name</h3>
+		<p>Movie Name</p>
+		<p>Movie Rating</p>
+		<p>Movie Review</p>
+
+	</div>
+</body>
+<script src="app.js"></script>
+</html>
