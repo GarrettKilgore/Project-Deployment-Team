@@ -7,7 +7,7 @@ function load(){
 	//blank out the movie_reviews div
 	movies_div.innerHTML = ""
 
-fetch("http://localhost:5000/movies")
+fetch("/movies")
 .then(function(response) {
 	response.json()
 	.then(function(data) {
@@ -80,7 +80,7 @@ function do_delete(id) {
 	console.log("You are going to delete trail: ", id)
 	let foo = confirm("Are you sure?")
 	console.log(foo)
-	fetch("http://localhost:5000/movies/"+id, {
+	fetch(`/movies/${id}`, {
 		method: "DELETE",
 		headers: {
 			"Content-Type": "application/x-www-form-urlencoded"
@@ -118,11 +118,12 @@ function addnewReview(){
 
 	let submit_method = "POST";
     const button_text = document.querySelector("#movie_submit_button").innerHTML;
-    let url = "http://localhost:5000/movies";
+    let url = "/movies";
 
     if (button_text === "SAVE") {
         submit_method = "PUT";
-        url = "http://localhost:5000/movies/" + editID;
+        url = `/movies/${editID}`;
+	console.log("PUT URL:", url);    
     }
 
 	//send to api
