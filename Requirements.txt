@@ -1,4 +1,0 @@
-I pushed my client and server folders to the repo.
-You're able to run the server in the Linux subsystem by typing in python3 app.py in the server folder. 
-From there you can click on index.html in the client folder to see the webpage.
-The webpage allows you to add reviews, edit them, and delete them.
